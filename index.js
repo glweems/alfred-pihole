@@ -1,37 +1,32 @@
 import alfy from "alfy";
-
-const url = "http://pi.hole/admin/api.php";
-
+alfy.debug = true;
 const output = [];
 
-const enabled = await alfy.fetch(`${url}?status`).then((data) => {
-  // output.push({ title: `Pi-Hole is ${data.status}` });
-  return data.status == "enabled" ? true : false;
+const baseUrl = "http://pi.hole/admin";
+
+const piholeUrl = (path) => `${baseUrl}/${path}`;
+
+const createPiholeLink = (title, subtitle, arg, icon) => ({
+  title: title,
+  subtitle: subtitle,
+  arg: piholeUrl(arg),
+  icon: {
+    path: `icons/${icon}.png`,
+  },
+  variables: {
+    action: "browser",
+  },
 });
 
-if (enabled) {
-  output.push({
-    title: "Disable Pi-Hole",
-    arg: "set disable",
-  });
-}
+const dashboard = createPiholeLink(
+  "Dashboard",
+  "Open Pi-Hole Dashboard",
+  "",
+  "home"
+);
 
-const commands = [
-  {
-    title: "Enable",
-    subtitle: "Enable pihole dns filter",
-    arg: "status",
-    autocomplete: "enable",
-  },
-  {
-    title: "Enable",
-    subtitle: "Enable pihole dns filter",
-    arg: "status enable",
-    autocomplete: "enable",
-  },
-];
+const links = [dashboard];
 
-commands.push(alfy.inputMatches(commands, "arg"));
-// alfy.debug();
+links.forEach((links) => output.push(links));
 
 alfy.output(output);
