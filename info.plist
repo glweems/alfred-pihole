@@ -8,7 +8,7 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>0205F302-9B72-4649-AB2A-FA02F1A57CCA</key>
+		<key>662F37D3-E355-4D2F-A34C-ABF2D004F4B6</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0205F302-9B72-4649-AB2A-FA02F1A57CCA</string>
+				<string>662F37D3-E355-4D2F-A34C-ABF2D004F4B6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -71,7 +71,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>dns</string>
+				<string>pph</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -81,21 +81,21 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>Loading...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "${1}"</string>
+				<string>./node_modules/.bin/run-node ./build/index "${1}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Open Page</string>
+				<string></string>
 				<key>title</key>
 				<string>Pi-Hole Admin Web</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -103,25 +103,6 @@
 			<string>92F59994-E71C-4200-A7E7-C95424926EC1</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:action}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>browser</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>0205F302-9B72-4649-AB2A-FA02F1A57CCA</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -145,6 +126,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{query}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node ./build/index "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Pi-Hole Admin Web</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>662F37D3-E355-4D2F-A34C-ABF2D004F4B6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -164,34 +194,41 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>0205F302-9B72-4649-AB2A-FA02F1A57CCA</key>
-		<dict>
-			<key>xpos</key>
-			<integer>605</integer>
-			<key>ypos</key>
-			<integer>220</integer>
-		</dict>
 		<key>154B9608-BF7B-49C4-88D5-E92D5CC531DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>715</integer>
+			<integer>465</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>35</integer>
 		</dict>
 		<key>4619A03B-C871-46C0-9231-233CF3B39B78</key>
 		<dict>
 			<key>xpos</key>
-			<integer>655</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>245</integer>
+		</dict>
+		<key>662F37D3-E355-4D2F-A34C-ABF2D004F4B6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>35</integer>
 		</dict>
 		<key>92F59994-E71C-4200-A7E7-C95424926EC1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>405</integer>
+			<integer>45</integer>
 			<key>ypos</key>
-			<integer>175</integer>
+			<integer>35</integer>
 		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>apikey</key>
+		<string>190fd215a0735c905a38cea8d48382ec94f2132307980b873a4eb970450afc90</string>
+		<key>url</key>
+		<string>http://pi.hole</string>
 	</dict>
 	<key>version</key>
 	<string>1.0</string>

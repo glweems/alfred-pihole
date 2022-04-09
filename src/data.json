@@ -1,0 +1,50 @@
+{
+  "menu": [
+    {
+      "title": "Admin Web Interface",
+      "subtitle": "Admin Web Interface",
+      "arg": "admin"
+    },
+    {
+      "title": "Summery",
+      "subtitle": "Pi-hole status summary",
+      "arg": "summery"
+    },
+    {
+      "title": "Recently Blocked",
+      "subtitle": "Recently Blocked Domain",
+      "arg": "recentBlocked"
+    }
+  ],
+  "web": [
+    {
+      "title": "Dashboard",
+      "subtitle": "Dashboard",
+      "arg": "",
+      "variables": { "action": "browser" }
+    },
+    {
+      "title": "Query Log",
+      "subtitle": "Query Log",
+      "arg": "queries",
+      "variables": { "action": "browser" }
+    },
+    {
+      "title": "Whitelist",
+      "subtitle": "Whitelist",
+      "arg": "groups-domains.php?type=white",
+      "variables": { "action": "browser" }
+    },
+    {
+      "title": "Blacklist",
+      "subtitle": "Blacklist",
+      "arg": "groups-domains.php?type=black",
+      "variables": { "action": "browser" }
+    },
+    {
+      "title": "Settings",
+      "subtitle": "Settings",
+      "arg": "settings"
+    }
+  ]
+}

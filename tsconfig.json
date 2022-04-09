@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "rootDir": "./src/",
+    "resolveJsonModule": true, /* Enable importing .json files */
+    // "noResolve": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./build/",
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+  }
+}
